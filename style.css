@@ -5,6 +5,62 @@ body {
     margin: 0px;
 }
 
+/* top section*/
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    /*top: 0; ??*/
+    border: 1px solid;
+    flex: 0 0 auto;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+#ds-logo {
+    width: 5.5em;
+    height: 5.5em;
+    object-fit: cover;
+}
+
+.top .right {
+    margin-left: 2em;
+}
+
+.top .right img:hover {
+    transform: scale(1.25);
+    filter: drop-shadow(0px 0px 10px rgb(255, 76, 249));
+}
+
+.top .left {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3em;
+}
+
+.top .left a {
+    text-decoration: none;
+    font-family: "MontserratAlternates";
+    font-size: 16px;
+    color: #e3dcdc;
+}
+
+.top .left img {
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+}
+
+.top .left a:hover {
+    text-shadow: 0 0 5px rgb(76, 255, 255), 0 0 10px rgb(255, 76, 249), 0.5px 0.5px 15px rgb(76, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+
 /* header section*/
 .header,
 .footer {
@@ -12,36 +68,8 @@ body {
 }
 
 .header {
-    padding: 16px 192px 48px;
-    flex: 1
-}
-
-.top-header {
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    margin-bottom: 48px;
-}
-
-#ds-logo {
-    width: 80px;
-    height: auto;
-}
-
-
-.header ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    gap: 48px;
-}
-
-
-.top-header a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #a2a0a0;
+    padding: 96px 192px 48px;
+    flex: 1;
 }
 
 .hero {
@@ -54,6 +82,7 @@ body {
     margin-left: 128px;
     flex: 1;
     border-radius: 30px;
+    object-fit: cover;
 }
 
 .header-text {
@@ -78,7 +107,6 @@ body {
     color: lightseagreen;
 }
 
-.header .top-header a:hover,
 #sec-text a:hover,
 #header-button:hover {
     color: #e7e7e7;
@@ -170,7 +198,7 @@ body {
 /* quote section */
 
 .quote-section {
-    padding: 164px 256px;
+    padding: 164px 236px;
     flex: 1;
     font-family: "hakugyokurou";
     background-color: black
@@ -265,4 +293,16 @@ margin: 11em 0;*/
     font-size: 12px;
     text-decoration: none;
     color: white;
+}
+
+
+/* misc */
+@font-face {
+    font-family: "hakugyokurou";
+    src: url(fonts/hakugyokurou.ttf);
+}
+
+@font-face {
+    font-family: "MontserratAlternates";
+    src: url(fonts/MontserratAlternates-Medium.ttf);
 }
