@@ -5,7 +5,16 @@ body {
     margin: 0px;
 }
 
-/* top section*/
+#main-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(1.25);
+}
+
+/* top section */
 .top {
     display: flex;
     justify-content: space-between;
@@ -13,15 +22,15 @@ body {
     width: 100%;
     position: fixed;
     z-index: 9;
-    /*top: 0; ??*/
+    /*top: 0px; alr default*/
     border: 1px solid;
     flex: 0 0 auto;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0.75);
 }
 
 #ds-logo {
-    width: 5.5em;
-    height: 5.5em;
+    width: 5.2em;
+    height: 5.2em;
     object-fit: cover;
 }
 
@@ -31,7 +40,7 @@ body {
 
 .top .right img:hover {
     transform: scale(1.25);
-    filter: drop-shadow(0px 0px 10px rgb(255, 76, 249));
+    filter: drop-shadow(0px 0px 10px rgb(255, 76, 249)); /* shadow on image */
 }
 
 .top .left {
@@ -53,92 +62,116 @@ body {
     width: 4em;
     height: 4em;
     object-fit: cover;
+    filter: brightness(1.25);
 }
 
-.top .left a:hover {
-    text-shadow: 0 0 5px rgb(76, 255, 255), 0 0 10px rgb(255, 76, 249), 0.5px 0.5px 15px rgb(76, 255, 255);
+.top .left a:hover,
+#sec-text a:hover,
+#header-button:hover,
+.card a:hover,
+.fake-button:hover a,
+.quote-text .from a:hover, 
+.footer a:hover {
+    text-shadow: 0 0 10px rgb(0, 255, 255), 0 0 15px rgb(255, 33, 248), 0px 0px 20px rgb(238, 132, 248);
     color: rgb(255, 255, 255);
+    filter: brightness(1);
 }
 
 
 /* header section*/
-.header,
-.footer {
-    background-color: #1F2937;
-}
-
 .header {
-    padding: 96px 192px 48px;
     flex: 1;
+    background: none;
+    padding: 172px 196px 148px;
+    font-family: "Macondo-Regular"; 
 }
 
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 56px 72px;
+    border: 1px solid;
+    border-radius: 32px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #header-image {
-    margin-left: 128px;
-    flex: 1;
-    border-radius: 30px;
+    margin-left: 96px;
+    border-radius: 32px;
     object-fit: cover;
+    flex: 1;
+}
+
+#header-image:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255)); 
 }
 
 .header-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* is the default stretch..? */
 }
 
 #main-text {
-    font-size: 48px;
+    font-size: 54px;
     font-weight: 900;
-    color: #f9faf8;
+    color: #ffffff;
+    margin-bottom: 18px;
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 15px rgb(255, 0, 0), 0.5px 0.5px 20px rgb(255, 168, 76);
+}
+
+#sec-text {
+    margin-bottom: 40px;
 }
 
 #sec-text span {
     text-align: justify;
     display: block;
     font-size: 18px;
-    color: #e7e7e7;
+    color: white;
 }
 
 #sec-text a {
     text-decoration: none;
     color: lightseagreen;
-}
-
-#sec-text a:hover,
-#header-button:hover {
-    color: #e7e7e7;
+    filter: brightness(1.5);
 }
 
 #header-button {
-    padding: 8px 16px;
+    padding: 24px 72px;
     color: #ffff;
-    background-color: #3882f6;
-    border-radius: 12px;
+    background-image: linear-gradient(maroon, lightcoral);
+    font-size: 18px;
+    border-radius: 54px;
 }
+
+
 
 /* content section */
 .content {
-    padding: 24px 64px;
+    padding: 36px 64px 18px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(rgb(114, 105, 239), pink, rgb(255, 96, 96));
+    font-family: "IndieFlower-Regular";
 }
 
 #content-header {
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 900;
     color:#1f2937;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 }
 
 .content .cards {
     display: flex;
     flex-wrap: wrap;
-    width: 100%; /* adjusts according to broswer*/
+    width: 100%; /* adjusts according to broswer */
     justify-content: space-between;
 }
 
@@ -147,61 +180,90 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*border: 1px solid;*/
+    gap: 24px;
 }
 
 
-.card img,
-.card .hover-image {
+.card img {
     width: 256px;
     height: 256px;
     object-fit: cover;
     border-radius: 36px;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.card img {
-    position: relative;
-}
-
-.card .hover-image {
-    display: none;
+.hover-image { 
+    filter: brightness(1.25);
+    opacity: 0;
     position: absolute;
 }
 
-.card:hover img {
-    display: inline;
+.hover-image:hover { 
+    width: 296px; /* need to ensure width and height >= the picture its about to overlay. Behaviour can be changed with z-index */
+    height: 256px;
+    object-fit: cover;
+    opacity: 1;
+
+    /* 
+    alternatively, 
+    in .hover-image, apply <display: none;>
+    then apply <display: inline;> here
+    However, be careful that hover does not work on an image whose display is none
+    so hover the parent instead: <.card:hover img { display: inline; }>
+
+    Note: Hovering over any region in the parent will cause the shift.
+    */
 }
 
 .nezuko {
-    border: 5px solid #ff09ca;
+    border: 4px solid #ff00c8;
+}
+
+#nezuko-hidden {
+    box-shadow: 0px 0px 40px 20px #ff00d9; /* x-offset, y-offset, blur, spread, color */
 }
 
 .tanjiro {
-    border: 5px solid #f22e2e;
+    border: 4px solid #f22e2e;
+}
+
+#tanjiro-hidden {
+    box-shadow: 0px 0px 40px 20px #ff0000;
 }
 
 .zenitsu {
-    border: 5px solid #fff946;
+    border: 4px solid #fff946;
+}
+
+#zenitsu-hidden {
+    box-shadow: 0px 0px 40px 20px #fff700;
 }
 
 .inosuke {
-    border: 5px solid #0bdbd1;
+    border: 4px solid #0bdbd1;
 }
 
-.card p {
-    font-size: 18px;
-    color:#1F2937
+#inosuke-hidden {
+    box-shadow: 0px 0px 40px 20px #0bdbd1;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 24px;
+    color:white;
 }
 
 
 /* quote section */
-
 .quote-section {
-    padding: 164px 236px;
+    background-image: url(images/rengoku.gif);
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+
+    padding: 148px 200px 196px;
     flex: 1;
     font-family: "hakugyokurou";
-    background-color: black
 }
 
 .quote-text {
@@ -210,37 +272,35 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    text-shadow: 0 0 10 rgb(0, 0, 0) 0 0 20 rgb(0, 0, 0);
+    letter-spacing: 0.1em;
 }
 
 .quote {
-    font-size: 36px;
+    font-size: 34px;
 }
 
 .quote-text .from {
-    font-size: 18px;
+    font-size: 24px;
 }
 
-
-/*display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-color: white;
-border-radius: 1em;
-text-shadow: 0 0 1em black, 0 0 2em black;
-font-family: "hakugyokurou";
-letter-spacing: 0.1em;
-margin: 11em 0;*/
-
+.quote-text .from a {
+    text-decoration: none;
+    color: white;
+}
 
 /* call to action section */
 .call-to-action {
     flex: 1;
-    padding: 32px 312px;
-    background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));
+    padding: 32px 244px;
+    background-image: linear-gradient(rgb(158, 37, 37),rgb(50, 11, 11));
     display: flex; /*need flex here so c2a can shrink and remain centered without overflowing*/
     justify-content: center;
     align-items: center;
+
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "YuseiMagic-Regular";
 }
 
 .c2a {
@@ -248,32 +308,34 @@ margin: 11em 0;*/
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-image: linear-gradient(rgb(7, 51, 65), rgb(4, 68, 45));
-    padding: 16px 72px;
-    border: 4px solid;
-    border-radius: 12px;
-}
-
-.c2a-text {
-    color: white;
+    background-image: linear-gradient(rgba(34, 81, 24, 0.672), rgba(3, 14, 1, 0.672));
+    padding: 16px 96px;
+    border-radius: 6px;
 }
 
 .c2a-header {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: 28px;
+    margin-bottom: 14px;
 }
 
-.c2a-body {
-    font-size: 18px;
-}
-
-#c2a-button {
-    font-size: 24px;
-    color: #ffff;
-    background-color: #38f6bd;
-    padding: 8px 16px;
-    border-radius: 18px;
+.fake-button {
+    background-image: linear-gradient(rgba(182, 223, 106, 0.5), rgba(33,41,17,0.5));
+    padding: 12px 36px;
+    border-radius: 4px;
     margin-left: 72px;
+    border: 1px solid white;
+}
+
+.fake-button a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.fake-button:hover {
+    transform: scale(1.5);
+    filter: brightness(1.5);
+    background-image: linear-gradient(rgb(158, 37, 37),rgb(50, 11, 11));
 }
 
 
@@ -286,7 +348,7 @@ margin: 11em 0;*/
     font-size: 12px;
     color: white;
     text-align: center;
-    padding: 24px 0px;
+    padding: 16px 0px;
 }
 
 .footer a {
@@ -305,4 +367,19 @@ margin: 11em 0;*/
 @font-face {
     font-family: "MontserratAlternates";
     src: url(fonts/MontserratAlternates-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Macondo-Regular";
+    src: url(fonts/Macondo/Macondo-Regular.ttf);
+}
+
+@font-face {
+    font-family: "IndieFlower-Regular";
+    src: url(fonts/Indie_Flower/IndieFlower-Regular.ttf);
+}
+
+@font-face {
+    font-family: "YuseiMagic-Regular";
+    src: url(fonts/Yusei_Magic/YuseiMagic-Regular.ttf);
 }

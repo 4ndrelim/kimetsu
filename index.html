@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="background">
+            <img src="images/wisteria.jpeg" alt="Wisteria flowers blossom" id="main-bg">
+        </div>
         <div class="top">
             <div class="right">
                 <a href="https://kimetsu-no-yaiba.fandom.com/wiki/Kimetsu_no_Yaiba_Wiki">
@@ -27,22 +30,22 @@
         <div class="header">
             <div class="hero">
                 <div class="header-text">
-                    <p id="main-text">Kimetsu no Yaiba (鬼滅の刃)</p>
-                    <p id="sec-text">
+                    <div id="main-text">Kimetsu no Yaiba (鬼滅の刃)</div>
+                    <div id="sec-text">
                         <span>
                             <em><strong>Demon Slayer: Kimetsu no Yaiba</strong></em> is a hit manga series by 
                         <a href="https://en.wikipedia.org/wiki/Koyoharu_Gotouge">Koyoharu Gotouge</a>.
                         </span>
                         <span style="padding: 12px 0px">
-                            It follows the journey of Tanjiro Kamado in becoming a full-fledged demon slayer after his family's demise
-                            and sister's transformation into a demon.
+                            It follows the journey of Tanjiro Kamado in becoming a full-fledged demon slayer 
+                            after his family's demise by a demon and sister's transformation into one.
                         </span>
                         <span>
-                            The anime adaptation and the <a href="https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Mugen_Train">movie</a>, 
-                            produced by <a href="https://en.wikipedia.org/wiki/Ufotable">Ufotable</a>, has been widely received worldwide.
+                            The anime adaptation and <a href="https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Mugen_Train">movie</a>, 
+                            produced by <a href="https://en.wikipedia.org/wiki/Ufotable">Ufotable</a>, a japanese anime studio, was widely received worldwide.
                         </span>
-                    </p>
-                    <button id="header-button" onclick="location.href='https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba';">Learn More</button>
+                    </div>
+                    <button id="header-button" onclick="location.href='https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba';">More Info</button>
                 </div>
                 <img src="images/fight.gif" alt="Akaza & Rengoku" id="header-image">
             </div>
@@ -53,44 +56,44 @@
             <div class="cards">
                 <div class="card">
                     <img src="images/nezuko.jpeg" alt="Nezuko Kamado" class="nezuko">
-                    <img src="images/nezuko-serious.jpeg" alt="Serious Nezuko" class="hover-image nezuko">
-                    <p>Nezuko Kamado</p>
+                    <img src="images/nezuko-serious.jpeg" alt="Serious Nezuko" class="hover-image" class="nezuko" id="nezuko-hidden">
+                    <div><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Nezuko_Kamado"><em>Nezuko Kamado</em></a></div>
                 </div>
 
                 <div class="card">
                     <img src="images/tanjiro.jpeg" alt="Tanjiro Kamado" class="tanjiro">
-                    <img src="images/tanjiro-serious.jpeg" alt="Serious Tanjiro" class="hover-image tanjiro">
-                    <p>Tanjiro Kamado</p>
+                    <img src="images/tanjiro-serious.jpeg" alt="Serious Tanjiro" class="hover-image tanjiro" id="tanjiro-hidden">
+                    <div><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Tanjiro_Kamado"><em>Tanjiro Kamado</em></a></div>
                 </div>
 
                 <div class="card">
                     <img src="images/zenitsu.jpeg" alt="Zenitsu Agatsuma" class="zenitsu">
-                    <img src="images/zenitsu-serious.jpeg" alt="Serious Zenitsu" class="hover-image zenitsu">
-                    <p>Zenitsu Agatsuma</p>
+                    <img src="images/zenitsu-serious.jpeg" alt="Serious Zenitsu" class="hover-image zenitsu" id="zenitsu-hidden">
+                    <div><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Zenitsu_Agatsuma"><em>Zenitsu Agatsuma</em></a></div>
                 </div>
 
                 <div class="card">
                     <img src="images/inosuke.jpeg" alt="Hashibara Inosuke" class="inosuke">
-                    <img src="images/inosuke-seriously.png" alt="Serious Inosuke" class="hover-image inosuke">
-                    <p>Hashibara Inosuke</p>
+                    <img src="images/inosuke-seriously.png" alt="Serious Inosuke" class="hover-image inosuke" id="inosuke-hidden">
+                    <div><a href="https://kimetsu-no-yaiba.fandom.com/wiki/Inosuke_Hashibira"><em>Hashibara Inosuke</em></a></div>
                 </div>
             </div>
         </div>
 
         <div class="quote-section">
             <div class="quote-text">
-                <p class="quote"><em>Set your heart ablaze! Grit your teeth and look straight ahead!</em></p>
-                <p class="from">-Kyojuro Rengoku</p>
+                <p class="quote"><em>"Set your heart ablaze! Grit your teeth and look straight ahead!"</em></p>
+                <p class="from">-<a href="https://kimetsu-no-yaiba.fandom.com/wiki/Kyojuro_Rengoku">Kyojuro Rengoku</a></p>
             </div>
         </div>
 
         <div class="call-to-action">
             <div class="c2a">
                 <div class="c2a-text">
-                    <div class="c2a-header">Interested?</div>
+                    <div class="c2a-header">Interested..?</div>
                     <div class="c2a-body">Watch Tanjiro & his allies journey throughout the world of demon slayers in a quest to exterminate all demons.</div>
                 </div>
-                <button id="c2a-button" onclick="location.href='https://www.netflix.com/sg/title/81091393'">Watch!</button>
+                <div class="fake-button"><a href="https://www.netflix.com/sg/title/81091393">Watch</a>!</div>
             </div>
         </div>
 
