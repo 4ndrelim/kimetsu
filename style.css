@@ -90,7 +90,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 56px 72px;
+    padding: 64px 72px;
     border: 1px solid;
     border-radius: 32px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -146,18 +146,23 @@ body {
     background-image: linear-gradient(maroon, lightcoral);
     font-size: 18px;
     border-radius: 54px;
+    font-family: "Macondo-Regular";
+}
+
+#header-button:hover {
+    filter: brightness(1.25);
 }
 
 
 
 /* content section */
 .content {
-    padding: 36px 64px 18px;
+    padding: 36px 64px 24px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(rgb(114, 105, 239), pink, rgb(255, 96, 96));
+    background-image: linear-gradient(rgba(114, 105, 239, 0.335), rgba(255, 192, 203, 0.887), rgb(255, 96, 96));
     font-family: "IndieFlower-Regular";
 }
 
@@ -261,7 +266,7 @@ body {
     object-fit: cover;
     background-attachment: fixed;
 
-    padding: 148px 200px 196px;
+    padding: 156px 200px 204px;
     flex: 1;
     font-family: "hakugyokurou";
 }
@@ -292,7 +297,7 @@ body {
 /* call to action section */
 .call-to-action {
     flex: 1;
-    padding: 32px 244px;
+    padding: 36px 248px;
     background-image: linear-gradient(rgb(158, 37, 37),rgb(50, 11, 11));
     display: flex; /*need flex here so c2a can shrink and remain centered without overflowing*/
     justify-content: center;
@@ -309,7 +314,7 @@ body {
     align-items: center;
     width: 100%;
     background-image: linear-gradient(rgba(34, 81, 24, 0.672), rgba(3, 14, 1, 0.672));
-    padding: 16px 96px;
+    padding: 8px 88px;
     border-radius: 6px;
 }
 
@@ -348,7 +353,7 @@ body {
     font-size: 12px;
     color: white;
     text-align: center;
-    padding: 16px 0px;
+    padding: 8px 0px;
 }
 
 .footer a {
